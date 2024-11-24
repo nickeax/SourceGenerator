@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ViewModels;assembly=ViewModels"
+             x:Class="SourceGenerator.MainPage"
+             x:DataType="vm:MainPageViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Entry Placeholder="Type here..."
+               Text="{Binding InputText, Mode=TwoWay}" />
+            <Label Text="{Binding OutputText}"
+               FontSize="16"
+               TextColor="DarkGray"
+               Margin="0,10,0,0" />
+            <Button Text="Save..." Clicked="Button_Clicked" />
+            <Label Text="{Binding OutputText}" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
